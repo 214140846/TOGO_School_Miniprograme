@@ -1,3 +1,4 @@
+
 function randomNum(minNum, maxNum) {
   switch (arguments.length) {
     case 1:

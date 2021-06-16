@@ -1,3 +1,14 @@
+/**
+
+ * 如有技术问题或商业合作，可以添加本人微信:Exixir99
+
+ * @author 全黑科技
+
+ * @Time 2021-06-16 21:49:01
+
+ * @URL http://www.abtwork.com/
+
+ */
 var navigator2 = {
     appName: 'Netscape',
     userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1'

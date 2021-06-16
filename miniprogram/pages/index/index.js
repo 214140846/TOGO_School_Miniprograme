@@ -1,5 +1,14 @@
-//index.js
+/**
 
+ * 如有技术问题或商业合作，可以添加本人微信:Exixir99
+
+ * @author 全黑科技
+
+ * @Time 2021-06-16 21:49:01
+
+ * @URL http://www.abtwork.com/
+
+ */
 const time = require('../../utils/time.js')
 //获取应用实例
 const app = getApp()

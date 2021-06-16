@@ -1,18 +1,17 @@
-//app.js
+/**
+
+ * 如有技术问题或商业合作，可以添加本人微信:Exixir99
+
+ * @author 全黑科技
+
+ * @Time 2021-06-16 21:49:01
+
+ * @URL http://www.abtwork.com/
+
+ */
 App({
   onLaunch: function () {
-    // wx.getSystemInfo({
-    //   success: e => {
-    //     this.globalData.StatusBar = e.statusBarHeight;
-    //     let capsule = wx.getMenuButtonBoundingClientRect();
-    // if (capsule) {
-    //  	this.globalData.Custom = capsule;
-    // 	this.globalData.CustomBar = capsule.bottom + capsule.top - e.statusBarHeight;
-    // } else {
-    // 	this.globalData.CustomBar = e.statusBarHeight + 50;
-    // }
-    //   }
-    // })
+
 
 
     if (!wx.cloud) {

@@ -1,4 +1,14 @@
-// miniprogram/pages/emptyClassRoom/emptyClassRoom.js
+/**
+
+ * 如有技术问题或商业合作，可以添加本人微信:Exixir99
+
+ * @author 全黑科技
+
+ * @Time 2021-06-16 21:49:01
+
+ * @URL http://www.abtwork.com/
+
+ */
 Page({
 
   /**
