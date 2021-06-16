@@ -1,12 +1,29 @@
-# 云开发 quickstart
 
-这是云开发的快速启动指引，其中演示了如何上手使用云开发的三大基础能力：
 
-- 数据库：一个既可在小程序前端操作，也能在云函数中读写的 JSON 文档型数据库
-- 文件存储：在小程序前端直接上传/下载云端文件，在云开发控制台可视化管理
-- 云函数：在云端运行的代码，微信私有协议天然鉴权，开发者只需编写业务逻辑代码
+**ToGo校园**
 
-## 参考文档
+项目背景
 
-- [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
+近几年随着校园市场不断发展，校园服务行业也愈发鱼龙混杂。操作繁琐、功能单一、吃相难看这些都是目前大部分校园服务存在的问题。
+
+这个项目的初衷就是给同学们一个简单、方便、好用的校园小程序。目前，开源版本包含了基础的教务查询功能以及只有本校同学能使用的校园圈功能，后续也会不断开放运营版本的功能到开源项目中。
+
+部署
+
+- 将代码导入微信开发者工具，点选云开发。
+- 将cloudfunctions中的全部函数均进入目录后npm install。
+- 上传并部署全部云函数。
+- 在数据库中分别创建 comments、commentback、share、star、system、users表，最后将根目录的database_export-VQvEVynX_ZnT.json文件导入system表中。
+
+合作交流
+
+![image](.idea/13251623840420_.pic.jpg)
+![image](.idea/13261623840424_.pic_hd.jpg)
+![image](.idea/13271623840428_.pic_hd.jpg)
+![image](.idea/13281623840432_.pic_hd.jpg)
+![image](.idea/13291623840437_.pic_hd.jpg)
+![image](.idea/13301623840443_.pic_hd.jpg)
+![image](.idea/13311623840448_.pic.jpg)
+
+[全黑科技官方主页](http://www.abtwork.com/?fileGuid=T6yPgqJ8v9PKXHqc)
 
