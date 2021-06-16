@@ -1,0 +1,101 @@
+/** 按照苹果6机型适配 **/
+.text-1 {
+    font-size: 182rpx;
+    letter-spacing: -3rpx;
+    font-weight: 300;
+}
+
+.text-2 {
+    font-size: 120rpx;
+    letter-spacing: -1rpx;
+    font-weight: 300;
+}
+
+.text-3 {
+    font-size: 96rpx;
+    letter-spacing: 0;
+    font-weight: 400;
+}
+
+.text-4 {
+    font-size: 68rpx;
+    letter-spacing: 0.5rpx;
+    font-weight: 400;
+}
+
+.text-5 {
+    font-size: 48rpx;
+    letter-spacing: 0;
+    font-weight: 400;
+}
+
+.text-6 {
+    font-size: 40rpx;
+    letter-spacing: 0.3rpx;
+    font-weight: 500;
+}
+
+.text-subtitle1 {
+    font-size: 32rpx;
+    letter-spacing: 0.3rpx;
+    font-weight: 400;
+}
+
+.text-subtitle2 {
+    font-size: 28rpx;
+    letter-spacing: 0.2rpx;
+    font-weight: 500;
+}
+
+.text-body1 {
+    font-size: 32rpx;
+    letter-spacing: 1rpx;
+    font-weight: 400;
+}
+
+.text-body2 {
+    font-size: 28rpx;
+    letter-spacing: 0.5rpx;
+    font-weight: 400;
+}
+
+.text-button {
+    font-size: 28rpx;
+    letter-spacing: 1.5rpx;
+    font-weight: 500;
+}
+
+.text-caption {
+    font-size: 24rpx;
+    letter-spacing: 0.8rpx;
+    font-weight: 400;
+}
+
+.text-overline {
+    font-size: 20rpx;
+    letter-spacing: 3rpx;
+    font-weight: 400;
+}
+
+.text-secondary{
+    color: rgba(0, 0, 0, .54);
+}
+
+.text-disabled {
+    color: rgba(0, 0, 0, .38);
+}
+
+.icon-disabled {
+    color: rgba(0, 0, 0, .26);
+}
+
+.text-driver{
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,.26);
+    display: block;
+    color: rgba(0, 0, 0, .12);
+}
+
+.text-bolder{
+    font-weight: bolder;
+}

@@ -1,0 +1,90 @@
+<scroll-view scroll-y class="scrollPage">
+  <view class="UCenter-bg">
+
+
+    <view class='avatar'>
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <open-data type="userNickName"></open-data>
+    <text class="text-df"></text>
+
+    <view class="margin-top-sm">
+      <text></text>
+    </view>
+    <image
+      src="https://7363-schoolgzgsxy-2g07k3mh30f9fcde-1305126347.tcb.qcloud.la/system/wave.gif?sign=878472d579816f574989043298c06812&t=1614861678"
+      mode="scaleToFill" class="gif-wave"></image>
+  </view>
+  <view class="padding flex text-center text-grey bg-white shadow-warp">
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="text-xxl text-orange">{{visitTotal}}</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-attentionfill  text-orange"></text> 浏览数</view>
+    </view>
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="text-xxl text-blue">{{starCount}}</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-favorfill  text-orange"></text> 点赞数</view>
+    </view>
+    <view class="flex flex-sub flex-direction">
+      <view class="text-xxl text-green">{{forksCount}}</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-commentfill  text-orange"></text> 评论数</view>
+    </view>
+  </view>
+
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow" catchtap="{{is_bind?'unLogin':'toLogin'}}">
+      <button class="cu-btn content">
+        <text class="cuIcon-writefill text-cyan"></text>
+        <text class="text-grey">{{is_bind?'解绑':"绑定"}}教务网</text>
+      </button>
+    </view>
+    <view class="cu-item arrow" wx:if="{{is_bind}}">
+      <view class="content" bindtap="go_my_share" >
+        <text class="cuIcon-formfill text-purple"></text>
+        <text class="text-grey">我的帖子</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <view class="content" bindtap="showQrcode">
+        <text class="cuIcon-appreciatefill text-red"></text>
+        <text class="text-grey">合作联系</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <view class="content" open-type="feedback">
+        <text class="cuIcon-formfill text-grey"></text>
+        <text class="text-grey">BUG反馈</text>
+      </view>
+    </view>
+
+    <!-- <view class="cu-item arrow">
+      <view class="content" bindtap="CopyLink" data-link="https://github.com/weilanwl/ColorUI">
+        <text class="cuIcon-github text-grey"></text>
+        <text class="text-grey">GitHub</text>
+      </view>
+    </view> -->
+    <!-- <view class="cu-item arrow">
+      <navigator class="content" url="/pages/about/about/about" hover-class="none">
+        <image src="/images/logo.png" class="png" mode="aspectFit"></image>
+        <text class="text-grey">关于ColorUI组件库</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/about/log/log" hover-class="none">
+        <text class="cuIcon-formfill text-green"></text>
+        <text class="text-grey">日志</text>
+      </navigator>
+    </view>
+
+
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/about/test/list" hover-class="none">
+        <text class="cuIcon-creativefill text-orange"></text>
+        <text class="text-grey">Bug测试</text>
+      </navigator>
+    </view> -->
+  </view>
+  <view class="cu-tabbar-height"></view>
+</scroll-view>

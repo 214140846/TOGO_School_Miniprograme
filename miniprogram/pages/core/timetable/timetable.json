@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#242C77",
+  "navigationBarTitleText": "课程表",
+  "backgroundColor": "#73b4ef",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "canvasdrawer": "/utils/canvasdrawer/canvasdrawer"
+  }
+}

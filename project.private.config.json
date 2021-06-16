@@ -1,0 +1,109 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "pages/core/timetable/timetable",
+          "pathName": "pages/core/timetable/timetable",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/my",
+          "pathName": "pages/my/my",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/core/timetable/timetable",
+          "pathName": "pages/core/timetable/timetable",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/core/score/score",
+          "pathName": "pages/core/score/score",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/course/course",
+          "pathName": "pages/course/course",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/course/search",
+          "pathName": "pages/course/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/course/course",
+          "pathName": "pages/course/course",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/course/search",
+          "pathName": "pages/course/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/map/map",
+          "pathName": "pages/map/map",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/myContent/myContent",
+          "pathName": "pages/my/myContent",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/core/timetable/timetable",
+          "pathName": "pages/core/timetable/timetable",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
+          "query": "type=jwc",
+          "scene": null
+        },
+        {
+          "name": "pages/course/course",
+          "pathName": "pages/course/course",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

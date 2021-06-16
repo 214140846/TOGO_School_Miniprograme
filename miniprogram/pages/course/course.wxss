@@ -1,0 +1,38 @@
+@import "../../colorui/animation.wxss";
+.round-click {
+  height: 120rpx;
+  width: 120rpx;
+  background-color: rgb(142, 200, 248);
+  border-radius: 100%;
+  position: fixed;
+  bottom: 50rpx;
+  right: 25rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9;
+}
+
+.round-click text {
+  font-size: 32rpx;
+  max-width: 80rpx;
+  color: #fff;
+  text-align: center;
+}
+.index-tab {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  background: white;
+  border-bottom: 1rpx solid #E7E7E7;
+}
+.top{
+  height: 90rpx;
+}
+.index-tab view {
+  height: 90rpx;
+  line-height: 90rpx;
+  flex:1;
+  text-align: center;
+  color: #9E9E9E;
+} 

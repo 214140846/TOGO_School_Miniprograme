@@ -1,0 +1,11 @@
+
+
+var is_this_week = function (this_week, teach_week) {
+ var arr= teach_week.split("-")
+ console.log(arr,this_week)
+ return false;
+}
+
+module.exports = {
+  is_this_week: is_this_week,
+}

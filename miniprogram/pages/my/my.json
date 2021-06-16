@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "个人中心",
+  "component": true,
+  "navigationStyle": "custom",
+  "usingComponents": {
+      "cu-custom":"/colorui/components/cu-custom"
+  }
+}

@@ -1,0 +1,90 @@
+/* pages/core/course/search.wxss */
+
+
+.head{
+  display: flex;
+  flex-wrap: wrap;
+  padding:  10rpx;
+}
+image{
+  width: 220rpx;
+  height: 220rpx;
+  
+}
+.add, .add-after{
+  width: 220rpx;
+  height: 220rpx;
+  border-radius:20rpx;
+  border: 1rpx solid #E7E7E7; 
+  margin: 10rpx;
+  position: relative;
+}
+.top{
+  height: 90rpx;
+}
+.padding-xl {
+  padding: 150rpx;
+}
+.add .delete{
+  position: absolute;
+  right: 5rpx;
+  top: 5rpx;
+  font-size: 40rpx;
+  z-index: 10;
+  color: rgba(191,191,191,0.8);
+}
+.add-after {
+  text-align: center;
+  line-height: 220rpx
+}
+.add-after .iconjia1{
+  color: rgb(241, 0, 0);
+  font-size: 45rpx;
+}
+.title{
+  width: 100%;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+  margin-bottom: 10rpx; 
+}
+.line{
+  display: block;
+  width: 100%; 
+  height: 1px;
+  background: #E7E7E7;
+  }
+.contentTextArea{
+  width: 100%;
+  /* border-bottom: 1rpx solid #E7E7E7; */
+  min-height: 300rpx; 
+  padding: 10rpx;
+   box-sizing: border-box;
+}
+button{
+  width: 400rpx; 
+  border-radius:200rpx;
+  height: 80rpx;
+  background: rgb(77, 152, 250);
+  font-size: 32rpx;
+  color: white;
+  margin-top:30rpx; 
+  }
+  .tail{height: 400rpx;}
+  .btnWarp{
+    height: 140rpx; 
+    position: fixed; 
+    bottom: 0rpx; 
+    z-index: 10;
+    width: 100%;
+    /* background: white; */
+    /* btn也透明不可取 */
+    /* opacity: 0.8; */
+    background: rgba(255,255,255,0.97);
+}
+.local{
+  height: 160rp;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #E7E7E7; 
+}
+
+@import "iconfont.wxss"

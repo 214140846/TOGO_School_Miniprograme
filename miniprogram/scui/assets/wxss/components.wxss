@@ -1,0 +1,93 @@
+sc-button{
+    display: inline-block;
+    margin: 16rpx 32rpx;
+}
+
+sc-switch{
+    display: inline-block;
+    margin: 16rpx 32rpx;
+}
+
+sc-checkbox{
+    display: inline-block;
+    margin: 16rpx 32rpx;
+}
+
+sc-radio{
+    display: inline-block;
+    margin: 16rpx 32rpx;
+}
+
+sc-input{
+    display: block;
+    margin: 16rpx 32rpx;
+}
+
+sc-textarea{
+    display: block;
+    margin: 16rpx 32rpx;
+}
+
+sc-form{
+    display: block;
+    box-sizing: border-box;
+}
+
+sc-radio-group{
+    display: block;
+}
+
+sc-checkbox-group{
+    display: block;
+}
+
+sc-cell-group{
+    display: block;
+}
+
+sc-tab-group{
+    display: block;
+}
+
+sc-progress{
+    display: block;
+    margin: 16rpx 32rpx;
+}
+
+sc-cell sc-switch{
+    display: block;
+    margin: 0;
+}
+
+sc-cell sc-radio{
+    display: block;
+    margin: 0;
+}
+
+.sc-btn {
+    line-height: 72rpx;
+    min-width: 128rpx;
+    height: 72rpx;
+    padding: 0 32rpx;
+    font-size: 28rpx;
+    border-radius: 4rpx;
+    background-color: rgb(255,255,255);
+}
+
+.sc-outlined-btn{
+    border: 2rpx solid black;
+}
+
+.sc-input {
+    margin: 0;
+    border-bottom: 2rpx solid grey;
+    background: 0 0;
+}
+
+.sc-textarea {
+    margin: 0;
+    color: rgb(0, 0, 0);
+    border-bottom: 2rpx solid grey;
+    width: 100%;
+    background: 0 0;
+}

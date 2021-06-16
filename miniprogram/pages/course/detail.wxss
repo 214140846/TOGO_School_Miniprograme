@@ -1,0 +1,101 @@
+@import "../../colorui/animation.wxss";
+.release{
+  font-size: 14px;
+  background-color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 5px 0 5px 15px;
+}
+.releaseInput{
+  color: #ccc;
+}
+.release .text{
+  width: 302px;
+  min-height: 17px;
+  max-height: 51px;
+  line-height: 17px;
+  border-width: 7px 10px;
+  border-style: solid;
+  border-color: #fff;
+  background-color: #fff;
+}
+.release .submit{
+  color: #6c0;
+  width: 58px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+}
+/* 评论ITEM */
+
+.CommentItem {
+  display: flex;
+  padding: 15rpx 20rpx 15rpx 60rpx;
+}
+.previewimg{
+  float:left;
+  width:45%;
+  height:200px;
+  margin:2%;
+}
+.previewimg image{
+  width:100%;
+  height:100%;
+}
+
+
+/* 评论ITEM右侧 */
+
+.CommentItemRight {
+  flex: 1;
+}
+
+/* 评论区评论时间 */
+
+.commentDateStyle {
+  margin-left: auto;
+  color: var(--gray);
+  font-size: 25rpx;
+}
+
+/* 评论信息栏 */
+
+.commentTop {
+  display: flex;
+  align-items: center;
+}
+
+/* 评论区昵称 */
+
+.commentNickName {
+  color: var(--blue);
+  font-weight: 400;
+  font-size: 25rpx;
+}
+
+/* 评论区内容 */
+
+.commentContentText {
+  font-size: 26rpx;
+  padding-top: 10rpx;
+  line-height: 34rpx;
+}
+
+
+/* 评论区头像 */
+
+.commentAvatarStyle {
+  margin: 6rpx;
+  margin-right: 20rpx;
+  margin-left: 4rpx;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 8rpx;
+  overflow: hidden;
+}

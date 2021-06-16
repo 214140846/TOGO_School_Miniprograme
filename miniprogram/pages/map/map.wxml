@@ -1,0 +1,2 @@
+<!--miniprogram/pages/map/map.wxml-->
+<web-view src="https://ht.ylego.top/ggsmap"></web-view>

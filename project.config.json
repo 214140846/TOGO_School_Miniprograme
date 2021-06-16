@@ -1,0 +1,127 @@
+{
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": true,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "appid": "wx4019faa8015bf3ca",
+  "projectname": "ToGo%E6%A0%A1%E5%9B%AD",
+  "libVersion": "2.14.1",
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "pages/core/timetable/timetable",
+          "pathName": "pages/core/timetable/timetable",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/my",
+          "pathName": "pages/my/my",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/core/timetable/timetable",
+          "pathName": "pages/core/timetable/timetable",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/core/score/score",
+          "pathName": "pages/core/score/score",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/course/course",
+          "pathName": "pages/course/course",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/course/search",
+          "pathName": "pages/course/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/course/course",
+          "pathName": "pages/course/course",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/course/search",
+          "pathName": "pages/course/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的帖子",
+          "pathName": "pages/my/myContent",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

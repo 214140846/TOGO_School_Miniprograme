@@ -1,0 +1,108 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">校园圈</view>
+</cu-custom>
+<scroll-view scroll-x class="bg-gradual-blue nav text-center " wx:if="{{!is_wx_killer}}">
+  <view class="cu-item {{0==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="0">
+    <text class="cuIcon-friendfavor"></text> 普通帖
+  </view>
+  <view class="cu-item {{1==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="1">
+    <text class="cuIcon-friendfill"></text> 匿名帖
+  </view>
+</scroll-view>
+<!-- <view class="warp cu-card dynamic animation-scale-up">
+  <view class="head cu-item shadow">
+    <view class="add" wx:for="{{tempFilePaths}}" wx:key="index">
+      <image src="{{item}}" mode="aspectFill" catchtap="previewImage" data-id="{{index}}"></image>
+      <view class="delete iconfont iconshanchu1" catchtap="toDelete" data-id="{{index}}"></view>
+    </view>
+    <view class="add-after" catchtap="addImage" wx:if="{{imageCunt ? (imageCunt < 9 ? true : false) : true}}">
+      <text class="iconfont iconjia1"></text>
+    </view>
+  </view>
+  <view class="head cu-item shadow">
+    <view class="line"></view>
+    <textarea class="content" bindinput="setContent" maxlength="-1" placeholder="分享新鲜事" auto-height="true"
+      value="{{value}}" disable-default-padding></textarea>
+    <view class="tail"></view>
+    <view class="btnWarp"><button catchtap="go">分享</button></view>
+  </view>
+</view> -->
+<!-- <view class="top"></view> -->
+<view class="cu-card dynamic " wx:if="{{!is_wx_killer}}">
+  <view class="cu-item shadow">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg"
+          style="background-image:url({{unname?'../../images/user_head_1.png':user_data.avatarUrl}});"></view>
+        <view class="content flex-sub">
+          <view>{{un_nickName===''?user_data.nickName:un_nickName}}</view>
+          <view wx:if="{{un_nickName!==''}}" class="cuIcon-refresh text-orange text-sm  justify-between"
+            catchtap="change_nickName">
+            更换昵称
+          </view>
+          <!-- <view class="text-gray text-sm flex justify-between">
+            2019年12月3日
+          </view> -->
+        </view>
+      </view>
+    </view>
+    <!-- 文本框 -->
+    <view class="text-content">
+      <view class="line"></view>
+      <textarea class="contentTextArea" bindinput="setContent" maxlength="-1" placeholder="分享新鲜事" auto-height="true"
+        value="{{value}}" disable-default-padding></textarea>
+      <!-- <view class="local">添加地点</view> -->
+      <!-- <view class="tail"></view>
+      <view class="btnWarp"><button catchtap="go">分享</button></view> -->
+    </view>
+    <view class="text-gray text-sm text-right padding">
+    </view>
+    <view class="head cu-item shadow">
+      <view class="add" wx:for="{{tempFilePaths}}" wx:key="index">
+        <image src="{{item}}" mode="aspectFill" catchtap="previewImage" data-id="{{index}}"></image>
+        <view class="delete iconfont iconshanchu1" catchtap="toDelete" data-id="{{index}}"></view>
+      </view>
+      <view class="add-after" catchtap="addImage" wx:if="{{imageCunt ? (imageCunt < 9 ? true : false) : true}}">
+        <text class="iconfont iconjia1"></text>
+      </view>
+    </view>
+    <view class="padding-xl" catchtap="go">
+      <button class="cu-btn block bg-gradual-blue margin-tb-sm lg">
+        <text class="{{is_loading?'cuIcon-loading2':''}} iconfont-spin"></text> 发表
+      </button>
+    </view>
+
+  </view>
+</view>
+<view wx:else>
+  <view class="cu-card dynamic animation-scale-up" wx:if="{{is_wx_killer}}">
+    <view class="cu-item shadow">
+      <view class="cu-list menu-avatar">
+        <view class="cu-item">
+          <view class="cu-avatar round lg"
+            style="background-image:url('https://7363-schoolgzgsxy-2g07k3mh30f9fcde-1305126347.tcb.qcloud.la/system/IMG_0188%202.jpg?sign=ccecbf15020fa714b181324a14a5b28e&t=1615785846');">
+          </view>
+          <view class="content flex-sub">
+            <view>铁牛小程序官方</view>
+            <view class="text-gray text-sm flex justify-between">
+              2021.03.15
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>距离四级还有</view>
+        <view class="cu-progress">
+          <view class="bg-red" style="width:61.8%;">160天</view>
+        </view>
+        <view>距离期末还有</view>
+        <view class="cu-progress radius margin-top">
+          <view class="bg-red" style="width:30.0%;">30天</view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+
+</view>

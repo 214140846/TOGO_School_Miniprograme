@@ -1,0 +1,103 @@
+<!-- <view id="bind">
+  <view id="stars" />
+  <view id="stars2" />
+  <view id="stars3" />
+  <view id="content">
+    <view id="title">
+      绑定{{types[type].name}}
+    </view>
+    <form bindsubmit="login">
+      <view class="input-group" hover-class="active">
+        <text class="input-label">学号</text>
+        <input name="xh" placeholder="请输入您的学号" />
+      </view>
+      <view class="input-group" hover-class="active">
+        <text class="input-label">密码</text>
+        <input name="password" type="password" placeholder="请输入您的密码" />
+      </view>
+      <view class="help">
+        <view>{{types[type].help}}</view>
+      </view>
+      <button formType="submit">绑定</button>
+    </form>
+  </view>
+</view> -->
+
+<view class="container">
+  <view class="remind-box" wx:if="{{isLoading}}">
+    <image class="remind-img" src="/images/loading.gif"></image>
+  </view>
+  <block wx:else>
+    <view>
+      <image class="title" src="/images/title.png"></image>
+      <view class="content">
+        <view class="hd" style="transform:rotateZ({{angle}}deg);">
+          <image class="logo"
+            src="https://636c-cloud1-2gz3zqqx6833b79c-1306043556.tcb.qcloud.la/system/WechatIMG291.jpeg?sign=de99bec9a6825b770b554758caf79757&t=1622186037">
+          </image>
+          <image class="wave" src="/images/wave.png" mode="aspectFill"></image>
+          <image class="wave wave-bg" src="/images/wave.png" mode="aspectFill"></image>
+        </view>
+        <view class="bd">
+          <form class="login-form" bindsubmit="login" catchreset="formReset">
+            <view class="input-group {{userid_focus ? 'active' : ''}}">
+              <text class="input-label">学号</text>
+              <input name='uid' id='userid' type="number" cursor-spacing="30" placeholder="请输入你的学(工)号"
+                bindinput='UidInput' bindfocus="inputFocus" bindblur="inputBlur" value="{{username}}"/>
+            </view>
+            <view class="input-group {{passwd_focus ? 'active' : ''}}">
+              <text class="input-label">密码</text>
+              <input name='pwd' id='passwd' password="true" cursor-spacing="30" placeholder="请输入你的教务密码"
+                bindfocus="inputFocus" bindblur="inputBlur"  value="{{password}}"/>
+            </view>
+            <!-- <view class="input-group {{class_focus ? 'active' : ''}}">
+              <text class="input-label">班级</text>
+              <input name='user_class' id='user_class' type="text" cursor-spacing="30" placeholder="例:汽修2022"
+                bindinput='classInput' bindfocus="inputFocus" bindblur="inputBlur" />
+            </view> -->
+            <!-- <view class="input-group {{vcode_focus ? 'active' : ''}}">
+              <text class="input-label">验证码</text>
+              <input id='vcode' name='vcode' type='text' cursor-spacing="30" placeholder="输入验证码" value = "{{check_word}}" bindfocus="inputFocus" bindblur="inputBlur" maxlength="4"/>
+              <view class="weui-cell__ft">
+                <image class="weui-vcode-img" src="{{tem_url}}" style="width: 90px;height:25px;" bindtap="getVcode"></image>
+              </view>
+            </view> -->
+            <view class="login-help">
+              <view bindtap="showHelp">
+                <text>帮助 | 重置密码</text>
+                <image class="login-help-img" src="/images/help.png"></image>
+              </view>
+            </view>
+            <view>
+              <button formType="submit" class="login-btn">确认绑定</button>
+            </view>
+          </form>
+        </view>
+        <view class="help" id="help" wx:if="{{help_status}}" bindtap="tapHelp">
+          <view class="box">
+            <view class="box-hd">
+              <text class="box-title">帮助</text>
+              <image class="box-close" src="/images/close.png" bindtap="hideHelp"></image>
+            </view>
+            <view class="box-bd">
+              <view class="help-q">1、学工号和密码是什么？</view>
+              <view class="help-a">
+                <text>学工号：学号就是你的教务学号。老师请输入工号</text>
+                <text>密码：您设定的教务系统的登录密码。</text>
+              </view>
+              <!-- <view class="help-q">2、忘记密码？</view>
+              <view class="help-a">
+                <text bindtap="resetPassword" style="color:#8E54EC;">点击这里，重置教务系统密码。重置后密码为身份证号码后6位，请及时修改</text>
+                <text bindtap="copyResetURL" style="color:#8E54EC;">点击这里，复制粘贴到浏览器打开，输入学号点击下一步并按照提示完成密码重置</text>
+              </view> -->
+              <view class="help-q">3、大一新生？暂时还没有学号😥</view>
+              <view class="help-a">
+                <text>请耐心等待教务部门注册学籍，办理学生证，然后你就有学号啦。(不要企图用高考考生号登录成功)</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

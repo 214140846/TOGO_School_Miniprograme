@@ -1,0 +1,46 @@
+<view class="cu-card dynamic animation-scale-up" wx:for="{{share_data}}"
+  wx:if="{{!item.is_delete&&share_data.length>0}}">
+  <view class="cu-item shadow">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <!-- <view class="cu-avatar round lg" style="background-image:url({{item.un_nickName===''?item.user_avatarUrl}:'../../images/user_head_1.png'});"></view>
+        <view class="content flex-sub">
+          <view>{{item.un_nickName===''?item.user_nickName:item.un_nickName}}</view> -->
+        <view class="cu-avatar round lg"
+          style="background-image:url({{item.un_nickName===''?item.user_avatarUrl:'https://7363-schoolgzgsxy-2g07k3mh30f9fcde-1305126347.tcb.qcloud.la/system/user_head_1.png?sign=f911aefb979bc3ee6bd4239e8c4bbdf4&t=1616753369'}});">
+        </view>
+        <view class="content flex-sub">
+          <view>{{item.un_nickName===''?item.user_nickName:item.un_nickName}}</view>
+          <view class=" text-gray text-sm flex justify-between">
+            {{time.dateFormat(item._createTime,'MM.dd hh:mm')}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="text-content" catchtap="go_detail" data-share="{{item}}">
+      {{item.content}}
+    </view>
+    <!-- 图片部分 -->
+    <view class="grid flex-sub padding-lr {{isCard?'col-1':'col-3 grid-square'}}" catchtap="go_detail"
+      data-share="{{item}}">
+      <view class="bg-img {{isCard?'only-img':''}}" style="background-image:url({{image}});" wx:for="{{item.images}}"
+        wx:for-item='image' wx:key="{{index}}">
+      </view>
+    </view>
+    <!--  -->
+    <view class="text-gray text-df text-right padding">
+      <text class="cuIcon-attentionfill margin-lr-xs text-green"></text> {{item.view_num}}
+      <text class="cuIcon-appreciatefill margin-lr-xs {{time.is_star(item._id,share_star)?'text-red':''}}"
+        catchtap="change_star" data-target_id="{{item._id}}" data-target_type="share" data-index="{{index}}"
+        data-change_type="{{time.is_star(item._id,share_star)?'delete_star':'add_star'}}"></text>
+      {{item.star_num}}
+      <text class="cuIcon-messagefill margin-lr-xs text-green"></text> {{item.comment_num}}
+      <text class="cuIcon-close margin-lr-xs text-red"></text><text class="text-red" data-target_id="{{item._id}}"
+        catchtap="delete_my_share">删帖</text>
+    </view>
+  </view>
+</view>
+
+<view wx:if="share_data.length<=0">
+  <text class="text-center">暂无内容</text>
+</view>

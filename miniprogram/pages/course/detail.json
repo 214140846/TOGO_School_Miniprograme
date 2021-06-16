@@ -1,0 +1,7 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarTitleText":"详情",
+  "usingComponents": {
+      "cu-custom":"../../colorui/components/cu-custom"
+}
+}

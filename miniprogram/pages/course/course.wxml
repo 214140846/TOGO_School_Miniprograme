@@ -1,0 +1,153 @@
+<!--  -->
+<cu-custom bgColor="bg-gradual-blue">
+
+  <view slot="content">校园圈</view>
+</cu-custom>
+
+<wxs module='time' src='time.wxs'></wxs>
+<!-- <view wx:if="{{loader.isLoad}}" class="cu-load bg-blue {{loader.isLoad?'loading':'over'}}"></view> -->
+<scroll-view scroll-x class="bg-gradual-blue nav text-center " style="position: fixed;z-index:999">
+  <view class="cu-item {{0==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="0">
+    <text class="cuIcon-camera"></text> 推荐
+  </view>
+  <view class="cu-item {{1==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="1">
+    <text class="cuIcon-time"></text> 最新
+  </view>
+</scroll-view>
+<view class="top"></view>
+<view wx:if="{{!is_wx_killer}}" class="round-click animation-slide-bottom " bindtap='add_share'
+  data-target="DialogModal1">
+  <text>发条动态</text>
+</view>
+<!-- 官方制定帖 -->
+<view class="cu-card dynamic animation-scale-up" wx:if="{{!is_wx_killer}}">
+  <view class="cu-item shadow">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg"
+          style="background-image:url('https://7363-schoolgzgsxy-2g07k3mh30f9fcde-1305126347.tcb.qcloud.la/system/IMG_0188%202.jpg?sign=ccecbf15020fa714b181324a14a5b28e&t=1615785846');">
+        </view>
+        <view class="content flex-sub">
+          <view>哎哟铁牛小程序官方</view>
+          <view class="text-gray text-sm flex justify-between">
+            2021.03.15
+          </view>
+          
+        </view>
+      </view>
+    </view>
+    <view class="margin-top-sm text-content">
+      <view>为了同学们校园生活的便利，1.0版本上线了以下功能：</view>
+      <view>1.校友圈发帖 -> 爆料吐槽身边大事</view>
+      <view>2.匿名发帖 -> 匿名吐槽</view>
+      <view>小程序逐渐成长得更好,离不开同学们回馈的建议。</view>
+    </view>
+    <!-- 图片部分 -->
+    <!-- <view class="grid flex-sub padding-lr col-1" >
+      <view class="bg-img only-img" style="background-image:url('https://7363-schoolgzgsxy-2g07k3mh30f9fcde-1305126347.tcb.qcloud.la/system/IMG_0206.jpg?sign=ce7c4ed31a9ae6aaf2dc254b6193f390&t=1615785702');">
+      </view>
+    </view> -->
+    <!--  -->
+     <view class="text-gray text-df text-right padding">
+      <text class="cuIcon-upblock margin-lr-xs text-orange"></text> 置顶
+     <!-- <text class="cuIcon-attentionfill margin-lr-xs text-green"></text> {{item.view_num}}
+      <text class="cuIcon-appreciatefill margin-lr-xs {{time.is_star(item._id,share_star)?'text-red':''}}"
+        catchtap="change_star" data-target_id="{{item._id}}" data-target_type="share" data-index="{{index}}"
+        data-change_type="{{time.is_star(item._id,share_star)?'delete_star':'add_star'}}"></text>
+      {{item.star_num}}
+      <text class="cuIcon-messagefill margin-lr-xs text-green"></text> {{item.comment_num}}-->
+    </view> 
+  </view>
+</view>
+
+<view class="cu-card dynamic animation-scale-up" wx:if="{{is_wx_killer}}">
+  <view class="cu-item shadow">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg"
+          style="background-image:url('https://7363-schoolgzgsxy-2g07k3mh30f9fcde-1305126347.tcb.qcloud.la/system/IMG_0188%202.jpg?sign=ccecbf15020fa714b181324a14a5b28e&t=1615785846');">
+        </view>
+        <view class="content flex-sub">
+          <view>哎哟铁牛小程序官方</view>
+          <view class="text-gray text-sm flex justify-between">
+            2021.03.15
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="margin-top-sm text-content">
+      <view>距离四级还有</view>
+      <view class="cu-progress">
+        <view class="bg-red" style="width:61.8%;">160天</view>
+      </view>
+      <view>距离期末还有</view>
+      <view class="cu-progress radius margin-top">
+        <view class="bg-red" style="width:30.0%;">30天</view>
+      </view>
+      
+    </view>
+  </view>
+</view>
+
+<view class="cu-card dynamic animation-scale-up" >
+  <view class="cu-item shadow" wx:for="{{share_data}}">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <!-- <view class="cu-avatar round lg" style="background-image:url({{item.un_nickName===''?item.user_avatarUrl}:'../../images/user_head_1.png'});"></view>
+        <view class="content flex-sub">
+          <view>{{item.un_nickName===''?item.user_nickName:item.un_nickName}}</view> -->
+        <view class="cu-avatar round lg"
+          style="background-image:url({{item.un_nickName===''?item.user_avatarUrl:'https://7363-schoolgzgsxy-2g07k3mh30f9fcde-1305126347.tcb.qcloud.la/system/user_head_1.png?sign=f911aefb979bc3ee6bd4239e8c4bbdf4&t=1616753369'}});">
+        </view>
+        <view class="content flex-sub">
+          <view>{{item.un_nickName===''?item.user_nickName:item.un_nickName}}</view>
+          <view class=" text-gray text-sm flex justify-between">
+            {{time.dateFormat(item._createTime,'MM.dd hh:mm')}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="text-content" catchtap="go_detail" data-share="{{item}}">
+      {{item.content}}
+    </view>
+    <!-- 图片部分 -->
+    <view class="grid flex-sub padding-lr {{isCard?'col-1':'col-3 grid-square'}}" catchtap="go_detail"
+      data-share="{{item}}">
+      <view class="bg-img {{isCard?'only-img':''}}" style="background-image:url({{image}});" wx:for="{{item.images}}"
+        wx:for-item='image' wx:key="{{index}}">
+      </view>
+    </view>
+    <!--  -->
+    <view class="text-gray text-df text-right padding">
+      <text class="cuIcon-attentionfill margin-lr-xs text-green"></text> {{item.view_num}}
+      <text class="cuIcon-appreciatefill margin-lr-xs {{time.is_star(item._id,share_star)?'text-red':''}}"
+        catchtap="change_star" data-target_id="{{item._id}}" data-target_type="share" data-index="{{index}}"
+        data-change_type="{{time.is_star(item._id,share_star)?'delete_star':'add_star'}}"></text>
+      {{item.star_num}}
+      <text class="cuIcon-messagefill margin-lr-xs text-green"></text> {{item.comment_num}}
+    </view>
+  </view>
+</view>
+
+
+
+
+<view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">授权</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      发动态需要您的微信头像以及微信名授权
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn line-green text-green" bindtap="hideModel">狠心拒绝</button>
+        <button class="cu-btn bg-green margin-left" open-type="getUserProfile" bindtap="getUserProfile">好哒</button>
+      </view>
+    </view>
+  </view>
+</view>

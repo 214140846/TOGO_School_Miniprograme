@@ -1,0 +1,143 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">详情</view>
+</cu-custom>
+<wxs module='time' src='time.wxs'></wxs>
+<view wx:if="{{loader.load_show}}" class="cu-load bg-blue {{loader.isLoad?'loading':'over'}} animation-fade animation-reverse"></view>
+<view class="cu-card dynamic animation-scale-up">
+  <view class="cu-item shadow " bindtap="show_comment" >
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url(  {{share_detail.un_nickName===''?share_detail.user_avatarUrl:'https://7363-schoolgzgsxy-2g07k3mh30f9fcde-1305126347.tcb.qcloud.la/system/user_head_1.png?sign=f911aefb979bc3ee6bd4239e8c4bbdf4&t=1616753369'}});"></view>
+        <view class="content flex-sub">
+          <view>{{share_detail.un_nickName===''?share_detail.user_nickName:share_detail.un_nickName}}</view>
+          <view class="text-gray text-sm flex justify-between">
+            {{time.dateFormat(share_detail._createTime,'MM.dd hh:mm')}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="text-content">
+      {{share_detail.content}}
+    </view>
+    <!-- 图片部分 -->
+    <view class="grid flex-sub padding-lr {{isCard?'col-1':'col-3 grid-square'}} ">
+      <view class="bg-img {{isCard?'only-img':''}}" style="background-image:url({{image}});"
+        wx:for="{{share_detail.images}}" wx:for-item='image' wx:key="{{index}}" catchtap="previewImage" data-src="{{image}}">
+      </view>
+    </view>
+    <!--  -->
+    <view class="text-gray text-sm text-right padding">
+      <text class="cuIcon-attentionfill lg margin-lr-xs"></text> {{share_detail.view_num}}
+      <text
+        class="cuIcon-appreciatefill lg margin-lr-xs {{time.is_star(share_detail._id,share_or_comment_star)?'text-red':''}}"
+        catchtap="change_star" data-target_id="{{share_detail._id}}" data-target_type="share"
+        data-change_type="{{time.is_star(share_detail._id,share_or_comment_star)?'delete_star':'add_star'}}"></text>
+      {{share_detail.star_num}}
+      <text class="cuIcon-messagefill lg margin-lr-xs"></text> {{share_detail.comment_num}}
+    </view>
+    <!-- 评论区 -->
+    <view class="cu-list menu-avatar comment solids-top" wx:for="{{share_comment_data}}" wx:for-item='share_comment'
+      data-comment_back_id="{{share_comment._id}}" catchtap="show_comment_back" data-comment_to_whom="" data-share_id="{{share_detail._id}}">
+      <view class="cu-item">
+        <view class="cu-avatar round" style="background-image:url({{share_comment.user_avatarUrl}});"></view>
+        <view class="content">
+          <view class="text-grey">{{share_comment.user_nickName}}</view>
+          <view class="text-gray text-content text-df">
+            {{share_comment.content}}
+          </view>
+
+          <view class="margin-top-sm flex justify-between">
+            <view class="text-gray text-sm">{{time.dateFormat(share_comment._createTime,'MM.dd hh:mm')}}</view>
+            <view>
+              <text
+                class="cuIcon-appreciatefill {{time.is_star(share_comment._id,share_or_comment_star)?'text-red':'text-grey'}}"
+                catchtap="change_star" data-target_id="{{share_comment._id}}" data-target_type="comments"  data-index="{{index}}"
+                data-change_type="{{time.is_star(share_comment._id,share_or_comment_star)?'delete_star':'add_star'}}"></text>
+              <text class="cuIcon-messagefill text-gray margin-left-sm"></text>
+            </view>
+          </view>
+          <!-- 评论回复区 -->
+          <!-- 用户评论ITEM -->
+          <view class="CommentItem ~active-gray animation-fade" wx:if="{{share_comment.comment_back.length!==0}}"
+            wx:for="{{share_comment.comment_back}}" wx:for-item="comment_back"
+            data-comment_back_id="{{share_comment._id}}" data-comment_to_whom="{{comment_back.user_nickName}}" data-share_id="{{share_detail._id}}"
+            catchtap="show_comment_back">
+            <!-- 评论用户头像 -->
+            <view class="commentAvatarStyle">
+              <view class="cu-avatar radius" style="background-image:url({{comment_back.user_avatarUrl}});"></view>
+            </view>
+            <!-- 评论用户信息 -->
+            <view class="CommentItemRight">
+              <!-- 评论信息栏 -->
+              <view class="commentTop">
+                <!-- 用户昵称 -->
+                <view class="commentNickName">
+                  <view class="text-grey">{{comment_back.user_nickName}} {{comment_back.to_whome===''?'':'回复'}} {{comment_back.to_whome}}</view>
+                </view>
+                <!-- 评论时间 -->
+                <view class="commentDateStyle">
+                  <view class="text-gray text-sm">{{time.dateFormat(comment_back._createTime,'MM.dd hh:mm')}}</view>
+                </view>
+              </view>
+              <!-- 评论内容 -->
+              <view class="commentContentText ~active-gray">{{comment_back.comment_back_content}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- <view class="cu-modal bottom-modal {{modalName=='comment'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white">
+      <view class="action text-green">确定</view>
+    </view>
+  </view>
+</view> -->
+<view wx:if="{{show_comment}}" class="animation-fade">
+  <view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" style="bottom:{{InputBottom}}px">
+    <view class="action" catchtap="InputBlur">
+      <text class="cuIcon-keyboard text-grey"></text>
+    </view>
+    <input class="solid-bottom" bindfocus="InputFocus" bindblur="InputBlur" adjust-position="{{false}}"
+      focus="{{false}}" maxlength="300" placeholder="回复" bindinput="comment_Input" cursor-spacing="10"></input>
+    <view class="action">
+    </view>
+    <button class="cu-btn bg-green shadow" bindtap="send_comment">发送</button>
+  </view>
+</view>
+<view wx:if="{{show_comment_back}}" class="animation-fade ">
+  <view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" style="bottom:{{InputBottom}}px">
+    <view class="action">
+      <text class="cuIcon-keyboard text-grey"></text>
+    </view>
+    <input class="solid-bottom" bindfocus="InputFocus" bindblur="InputBlur" adjust-position="{{false}}"
+      focus="{{false}}" maxlength="300" placeholder="{{to_whome===''?'回复':to_whome}}" bindinput="comment_Input"
+      cursor-spacing="10"></input>
+    <view class="action">
+    </view>
+    <button class="cu-btn bg-green shadow" bindtap="send_comment_back">发送</button>
+  </view>
+</view>
+
+<view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">授权</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      发动态需要您的微信头像以及微信名授权
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn line-green text-green" bindtap="hideModal">狠心拒绝</button>
+        <button class="cu-btn bg-green margin-left" open-type="getUserProfile" bindtap="getUserProfile">好哒</button>
+      </view>
+    </view>
+  </view>
+</view>
