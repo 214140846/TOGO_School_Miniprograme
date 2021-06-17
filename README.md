@@ -15,6 +15,12 @@
 - 上传并部署全部云函数。
 - 在数据库中分别创建 comments、commentback、share、star、system、users表，最后将根目录的database_export-VQvEVynX_ZnT.json文件导入system表中。
 
+体验账号
+
+u：201888888
+p：1
+
+
 合作交流
 
 ![image](.idea/13251623840420_.pic.jpg)
