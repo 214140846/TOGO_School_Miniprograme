@@ -14,6 +14,7 @@
 - 将cloudfunctions中的全部函数均进入目录后npm install。
 - 上传并部署全部云函数。
 - 在数据库中分别创建 comments、commentback、share、star、system、users表，最后将根目录的database_export-VQvEVynX_ZnT.json文件导入system表中。
+- 将system记录中的is_wx_killer字段改为false，即可开启校园圈功能
 
 体验账号
 
