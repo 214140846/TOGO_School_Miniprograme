@@ -39,7 +39,5 @@ p：1
 ![image](.idea/13281623840432_.pic_hd.jpg)
 ![image](.idea/13291623840437_.pic_hd.jpg)
 ![image](.idea/13301623840443_.pic_hd.jpg)
-![image](.idea/13311623840448_.pic.jpg)
 
-[全黑科技官方主页](http://www.abtwork.com/?fileGuid=T6yPgqJ8v9PKXHqc)
 
