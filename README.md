@@ -4,7 +4,11 @@
 
 **开源不易，右上角点个star吧～**
 
-### Gitee : https://gitee.com/zengyunengineer/TOGO_School_Miniprograme
+## 2.0开发完成
+### 技术栈：React Antd SpringBoot Uniapp
+### 演示视频
+<iframe src="//player.bilibili.com/player.html?aid=695409174&bvid=BV1924y187xt&cid=1037642594&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
 
 ### 项目背景
 
@@ -55,3 +59,4 @@ p：1
 ![image](docImg/13301623840443_.pic_hd.jpg)
 
 
+### Gitee : https://gitee.com/zengyunengineer/TOGO_School_Miniprograme
