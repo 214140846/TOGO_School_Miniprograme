@@ -7,9 +7,8 @@
 ## 2.0开发完成
 ### 技术栈：React Antd SpringBoot Uniapp
 ### 演示视频
-<iframe src="//player.bilibili.com/player.html?aid=695409174&bvid=BV1924y187xt&cid=1037642594&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
-
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://b23.tv/p1bleX1)
 ### 项目背景
 
 近几年随着校园市场不断发展，校园服务行业也愈发鱼龙混杂。操作繁琐、功能单一、交互死板等,这些都是目前大部分校园服务存在的问题。
