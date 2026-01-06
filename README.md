@@ -1,4 +1,4 @@
-
+<img width="870" height="802" alt="image" src="https://github.com/user-attachments/assets/24284daa-7526-46dd-a2c3-2cfb63d37d23" />
 
 # 🏆 ToGo校园
 
@@ -61,3 +61,7 @@ p：1
 
 
 ### Gitee : https://gitee.com/zengyunengineer/TOGO_School_Miniprograme
+
+# 作者其他作品
+[无水印 Sora 2 AI 视频生成社交站](https://sora2.cloud)
+[Ricebowl AI 一站式 AI 视频图片生成平台](https://ricebowl.ai)
